@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Customer Profile</title>
+
+    <link rel="stylesheet" href="custom.css">
+
+   <!-- Prevent smartphones from scaling pages down -->
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" href="custom.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+   <!-- fades in content with jQuery animate effects -->
+   <script>
+    $(document).ready(function(){
+      $("h1").hide(0).delay(100).fadeIn(1000)
+      $("#info").hide(0).delay(200).fadeIn(1500)
+      $("#interest").hide(0).delay(300).fadeIn(2000)
+      $("#order").hide(0).delay(400).fadeIn(2500)
+    });
+  </script>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <!-- title and contact options are at the header of the page -->
+  <div class="wrap">
+    <header>
+      <div id="title">
+        <img src="plane.svg"/>
+        <a href="profile.html">CUSTOMER PROFILE</a>
+      </div>
+      <div id="contact">
+        About | Contact
+      </div>
+    </header>
+    <!-- navigation bar -->
+    <div id="nav">
+      <nav>
+          <ul>
+            <li>
+              <a href="#info">Profile</a>
+            </li>
+            <li>
+              <a href="#interest">Interests</a>
+            </li>
+            <li>
+              <a href="#order">Orders</a>
+            </li>
+            <li>
+              <a href="dashboard.html">Dashboard</a>
+            </li>
+          </ul>
+      </nav>
+    </div>
+    <!-- title of the profile -->
+          <h1>John's Profile</h1>
+          <div id="prof">
+             <div class="circle">
+               <!-- User Profile Image -->
+               <img class="profile-pic" src="man.png">
+             </div>
+          </div>
+        </div>
+        <!-- Divs follow to show the information about the customer -->
+        <div id="info">
+        <h2>John Doe</h2>
+          <p>Email: john.doe@email.com</p>
+          <p>Phone: 123-123-1234</p>
+          <p>Phone (Mobile): 123-123-9876</p>
+          <p>Since: March 2015</p>
+          <p>Location: 162.142.45.140, 8.13333</p></p>
+      </div>
+        <div id="interest">
+        <h2>Interests</h2>
+            <ul>
+              <li>Photography</li>
+              <li>Speed Cubes</li>
+              <li>Fortnite</li>
+              <li>Mother of Dragons</li>
+            </ul></p>
+        </div>
+        <div id="order">
+        <h2>Orders</h2>
+            <table>
+              <tr>
+                <th>#</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+              <tr>
+                <td>789</td>
+                <td>2018-06-15T16:00:00Z</td>
+                <td>Processing</td>
+                <td><a href="/order/789">View</a></td>
+              </tr>
+              <tr>
+                <td>456</td>
+                <td>2018-06-10T15:55:00Z</td>
+                <td>Shipped</td>
+                <td><a href="/order/456">View</a></td>
+              </tr>
+              <tr>
+                <td>123</td>
+                <td>2018-06-01T16:00:00Z</td>
+                <td>Delivered</td>
+                <td><a href="/order/123">View</a></td>
+              </tr>
+            </table></p>
+        </div>
+        
+      </div>
+
+  </body>
+</html>

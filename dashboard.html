@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Customers Dashboard</title>
+
+    <link rel="stylesheet" href="custom.css">
+
+   <!-- Prevent smartphones from scaling pages down -->
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" href="custom.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+   <script>
+    $(document).ready(function(){
+      $("h1").hide(0).delay(100).fadeIn(1000)
+      $("h2").hide(0).delay(200).fadeIn(1500)
+    });
+  </script>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Flights', 'Expenses'],
+          ['2004',  1000,      400],
+          ['2005',  1170,      460],
+          ['2006',  660,       1120],
+          ['2007',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Your Flight Data',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Flights'],
+          ['Germany', 2],
+          ['United States', 3],
+          ['Brazil', 4],
+          ['Canada', 5],
+          ['France', 6],
+          ['RU', 7]
+        ]);
+
+        var options = {};
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <header>
+      <div id="title">
+        <img src="plane.svg"/>
+        <a href="dashboard.html">DASHBOARD</a>
+      </div>
+      <div id="contact">
+        About | Contact
+      </div>
+    </header>
+    <div id="nav">
+      <nav>
+          <ul>
+            <li>
+              <a href="profile.html">Profile</a>
+            </li>
+            <li>
+              <a href="profile.html">Interests</a>
+            </li>
+            <li>
+              <a href="profile.html">Orders</a>
+            </li>
+            <li>
+              <a href="dashboard.html">Dashboard</a>
+            </li>
+          </ul>
+      </nav>
+    </div>
+          <h1>John's Dashboard</h1>
+        <div id="flights">
+        <h2>John Doe's Flights 2004-2007</h2>
+        <div id="curve_chart" style="width: 900px; height: 500px"></div>
+      </div>
+        <div id="locate">
+        <h2>Destinations</h2>
+            <div id="regions_div" style="width: 900px; height: 500px;"></div>
+        </div>
+        
+      </div>
+
+  </body>
+</html>
